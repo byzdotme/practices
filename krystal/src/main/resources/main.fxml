@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.BarChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.web.WebView?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.tony.practices.jfx.krystal.controller.MainController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
    <children>
-      <Accordion prefHeight="400.0" prefWidth="176.0">
-        <panes>
-          <TitledPane animated="false" text="item1">
-               <font>
-                  <Font name="Songti SC Black" size="13.0" />
-               </font>
-            </TitledPane>
-          <TitledPane animated="false" text="item2">
-               <font>
-                  <Font name="Songti SC Black" size="13.0" />
-               </font>
-            </TitledPane>
-            <TitledPane animated="false" prefHeight="200.0" prefWidth="200.0" text="item3">
-               <font>
-                  <Font name="Songti SC Black" size="13.0" />
-               </font>
-            </TitledPane>
-        </panes>
-      </Accordion>
-      <BarChart layoutX="280.0" layoutY="14.0" prefHeight="237.0" prefWidth="306.0">
-        <xAxis>
-          <CategoryAxis side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT">
-               <tickLabelFont>
-                  <Font name="Songti SC Black" size="10.0" />
-               </tickLabelFont>
-            </NumberAxis>
-        </yAxis>
-      </BarChart>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2">
+         <image>
+            <Image url="@imgs/krystal1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <image>
+            <Image url="@imgs/krystal2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <image>
+            <Image url="@imgs/krystal3.png" />
+         </image>
+      </ImageView>
+      <ScrollPane GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowSpan="3">
+         <content>
+            <WebView fx:id="webview" />
+         </content>
+      </ScrollPane>
    </children>
-</AnchorPane>
+</GridPane>

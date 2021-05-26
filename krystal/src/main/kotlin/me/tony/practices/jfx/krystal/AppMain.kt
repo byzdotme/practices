@@ -2,8 +2,8 @@ package me.tony.practices.jfx.krystal
 
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
+import javafx.scene.Parent
 import javafx.scene.Scene
-import javafx.scene.layout.Pane
 import javafx.stage.Stage
 
 /**
@@ -12,11 +12,11 @@ import javafx.stage.Stage
  */
 class AppMain : Application() {
     override fun start(stage: Stage) {
-        val pane = FXMLLoader.load<Pane>(javaClass.getResource("/main.fxml"))
-
-        stage.title = "hello krystal"
-        stage.scene = Scene(pane)
-        stage.show()
+        val root = FXMLLoader.load<Parent>(javaClass.getResource("/main.fxml"))
+        stage.apply {
+            title = "hello krystal"
+            scene = Scene(root)
+        }.show()
     }
 
     companion object {
