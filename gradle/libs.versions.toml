@@ -12,6 +12,7 @@ springboot-validation = { module = "org.springframework.boot:spring-boot-starter
 springboot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springboot" }
 springboot-undertow = { module = "org.springframework.boot:spring-boot-starter-undertow", version.ref = "springboot" }
 springboot-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "springboot" }
+springboot-es = { module = "org.springframework.boot:spring-boot-starter-data-elasticsearch", version.ref = "springboot" }
 
 springboot-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springboot" }
 
