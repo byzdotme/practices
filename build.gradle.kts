@@ -1,14 +1,14 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val javaVersion = "11"
+val javaVersion = "17"
 
 plugins {
-    kotlin("jvm") version "1.5.31" apply false
-    kotlin("plugin.spring") version "1.5.30" apply false
-    id("org.springframework.boot") version "2.5.4" apply false
+    kotlin("jvm") version "1.6.10" apply false
+    kotlin("plugin.spring") version "1.6.10" apply false
+    id("org.springframework.boot") version "2.6.3" apply false
     id("org.jruyi.thrift") version "0.4.2" apply false
-    id("org.openjfx.javafxplugin") version "0.0.10" apply false
-    id("org.beryx.jlink") version "2.24.1" apply false
+    id("org.openjfx.javafxplugin") version "0.0.11" apply false
+    id("org.beryx.jlink") version "2.24.4" apply false
 }
 
 group = "me.tonyirl"

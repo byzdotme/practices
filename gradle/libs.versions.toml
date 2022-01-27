@@ -1,8 +1,8 @@
 [versions]
-kotlinx-coroutines = "1.5.2"
-springboot = "2.5.6"
-spring-statemachine = "2.5.0"
-jackson = "2.12.5"
+kotlinx-coroutines = "1.6.0"
+springboot = "2.6.3"
+spring-statemachine = "3.0.1"
+jackson = "2.13.1"
 
 [libraries]
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
