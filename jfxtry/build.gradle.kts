@@ -4,11 +4,10 @@ plugins {
     id("org.openjfx.javafxplugin")
 }
 
-group = "me.tonyirl.practice.jfx"
+group = "me.tonyirl"
 version = "1.0.0"
 
 dependencies {
-    implementation(group ="org.apache.commons", name ="commons-pool2", version ="2.4.2")
 }
 
 javafx {
@@ -17,5 +16,5 @@ javafx {
 }
 
 application {
-    mainClass.set("me.tony.practice.jfx.krystal.MyApp")
+    mainClass.set("me.tony.practice.jfx.drag.DragAndDropExample")
 }
