@@ -1,4 +1,4 @@
-namespace java me.tonyirl.practice.thrift
+namespace java cn.bootz.account.api
 
 include "common.thrift"
 
@@ -15,7 +15,7 @@ enum MemberState {
 }
 
 struct Member {
-    1: required string memberId
+    1: required string member_id
     2: optional string name
     3: optional Gender gender
     4: optional i32 age
@@ -24,7 +24,7 @@ struct Member {
 }
 
 exception MemberNotValidException {
-    1: required string memberId
+    1: required string member_id
     2: optional string reason
 }
 

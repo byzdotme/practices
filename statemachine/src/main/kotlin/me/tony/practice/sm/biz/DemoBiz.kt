@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service
  */
 @Service
 class DemoBiz(val sm: StateMachine<OrderState, OrderAction>) {
-    init {
-        StateMachineBuilder
+    constructor(builder:StateMachineBuilder.Builder<OrderState, OrderAction>) : this(builder.build()) {
     }
+    constructor():this(StateMachineBuilder.builder<OrderState?, OrderAction?>().build())
 }

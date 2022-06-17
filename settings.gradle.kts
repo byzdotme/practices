@@ -1,9 +1,5 @@
 rootProject.name = "practices"
 
-enableFeaturePreview("VERSION_CATALOGS")
-
-
-
 include("web-practice")
 include("common-practice")
 include("thrift-practice")

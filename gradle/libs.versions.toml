@@ -1,8 +1,8 @@
 [versions]
-kotlinx-coroutines = "1.6.0"
-springboot = "2.6.3"
-spring-statemachine = "3.0.1"
-jackson = "2.13.1"
+kotlinx-coroutines = "1.6.2"
+springboot = "2.7.0"
+spring-statemachine = "3.2.0"
+jackson = "2.13.3"
 
 [libraries]
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
@@ -20,8 +20,8 @@ spring-statemachine-starter = { module = "org.springframework.statemachine:sprin
 
 jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
 
-guava = { module = "com.google.guava:guava", version = "31.0.1-jre" }
+guava = { module = "com.google.guava:guava", version = "31.1-jre" }
 
-thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.15.0" }
+thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.16.0" }
 
 [bundles]

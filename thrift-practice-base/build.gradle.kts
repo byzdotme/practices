@@ -12,6 +12,6 @@ dependencies {
 
 
 tasks.withType<org.jruyi.gradle.thrift.plugin.CompileThrift> {
-    thriftExecutable = "/usr/local/opt/thrift/bin/thrift"
+    thriftExecutable = "thrift"
     generator("java", "private-members", "fullcamel", "generated_annotations=undated", "option_type")
 }
