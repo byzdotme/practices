@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+entity xt as xt
+database hive as hive
+database rds as rds
+entity crane as crane
+
+xt --> hive: 数据rd编写dws表生成etl
+hive -> hive: dws etl invoke
+xt --> hive: 治理rd完成hive2mysql数据同步
+hive -> rds: hive2mysql etl invoke
+crane -> rds: 逐条判定处理
+crane -> crane: 后置处理（after all）
+
+@enduml

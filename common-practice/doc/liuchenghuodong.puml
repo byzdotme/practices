@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+group xt etl
+#pink:骑手数仓数据汇总;
+note right:涉及prd中mart_peisong的\n四张表，通过hive2hive的\n形式生成用于判定的宽表
+#pink:汇总数据导入mafka触发判定;
+end group
+group 治理后端服务
+#lightpink:消费mafka消息，解析数据\n调用商品服务接口获取推荐重量\n生成判定上下文;
+#lightblue:调用规则执行接口;
+#lightpink:针对规则命中结果，做可选的判定后过滤;
+#lightgrey:确认违规判定结果，生成处罚记录并调度执行;
+note right:已有逻辑可完全复用
+end group
+stop
+@enduml

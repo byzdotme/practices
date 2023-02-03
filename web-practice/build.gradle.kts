@@ -1,7 +1,13 @@
 plugins {
     kotlin("jvm")
     kotlin("plugin.spring")
+    kotlin("plugin.jpa")
+    kotlin("plugin.allopen")
     id("org.springframework.boot")
+}
+
+allOpen {
+    annotations("javax.persistence.Entity", "javax.persistence.MappedSuperclass", "javax.persistence.Embedabble")
 }
 
 dependencies {
@@ -12,6 +18,9 @@ dependencies {
     }
 
     implementation(libs.springboot.undertow)
+    implementation(libs.springboot.jpa)
+    implementation("org.postgresql:postgresql:42.5.0")
 
     testImplementation(libs.springboot.test)
 }
+

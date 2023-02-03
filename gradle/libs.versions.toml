@@ -1,8 +1,8 @@
 [versions]
-kotlinx-coroutines = "1.6.2"
-springboot = "2.7.0"
+kotlinx-coroutines = "1.8.0"
+springboot = "3.0.1"
 spring-statemachine = "3.2.0"
-jackson = "2.13.3"
+jackson = "2.14.1"
 
 [libraries]
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
@@ -12,6 +12,7 @@ springboot-validation = { module = "org.springframework.boot:spring-boot-starter
 springboot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springboot" }
 springboot-undertow = { module = "org.springframework.boot:spring-boot-starter-undertow", version.ref = "springboot" }
 springboot-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "springboot" }
+springboot-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "springboot" }
 springboot-es = { module = "org.springframework.boot:spring-boot-starter-data-elasticsearch", version.ref = "springboot" }
 
 springboot-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springboot" }
@@ -22,6 +23,6 @@ jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-
 
 guava = { module = "com.google.guava:guava", version = "31.1-jre" }
 
-thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.16.0" }
+thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.17.0" }
 
 [bundles]

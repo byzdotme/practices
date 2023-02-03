@@ -1,5 +1,6 @@
 package me.tony.practice.sm
 
+import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.statemachine.config.EnableStateMachine
@@ -13,12 +14,16 @@ import org.springframework.statemachine.config.EnableWithStateMachine
 @SpringBootApplication
 @EnableStateMachine
 @EnableStateMachineFactory
-class AppMain {
+class AppMain : CommandLineRunner {
 
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
             runApplication<AppMain>(*args)
         }
+    }
+
+    override fun run(vararg args: String?) {
+
     }
 }

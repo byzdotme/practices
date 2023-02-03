@@ -12,7 +12,7 @@ struct PageInfo {
     4: optional i32 page_count
 }
 
-struct ApiStatus {
+struct ApiResult {
     1: required i32 code
     2: required string msg = "ok"
     99: optional map<string, string> ext
@@ -23,4 +23,9 @@ exception ApiException {
     2: optional i32 sub_code
     3: optional string msg
     99: optional map<string, string> ext
+}
+
+enum ApiStatus {
+    OK = 1
+    INVALID = -1
 }
