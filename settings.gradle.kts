@@ -2,8 +2,8 @@ rootProject.name = "practices"
 
 include("web-practice")
 include("common-practice")
-include("thrift-practice")
-include("thrift-practice-base")
+//include("thrift-practice")
+//include("thrift-practice-base")
 include("eventbus")
 include("statemachine")
 include("krystal")

@@ -19,7 +19,7 @@ dependencies {
 
     implementation(libs.springboot.undertow)
     implementation(libs.springboot.jpa)
-    implementation("org.postgresql:postgresql:42.5.0")
+    implementation("org.postgresql:postgresql:42.5.1")
 
     testImplementation(libs.springboot.test)
 }

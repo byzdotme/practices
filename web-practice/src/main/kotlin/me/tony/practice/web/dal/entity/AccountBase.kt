@@ -4,7 +4,7 @@ import org.hibernate.Hibernate
 import org.hibernate.annotations.DynamicInsert
 import org.hibernate.annotations.DynamicUpdate
 import java.time.LocalDateTime
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @DynamicInsert

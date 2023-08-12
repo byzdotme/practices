@@ -1,15 +1,15 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.KotlinTopLevelExtension
 
 val javaVersion = "17"
 
 plugins {
-    kotlin("jvm") version "1.8.0" apply false
-    kotlin("plugin.spring") version "1.8.0" apply false
-    kotlin("plugin.jpa") version "1.8.0" apply false
-    kotlin("plugin.allopen") version "1.8.0" apply false
-    id("org.springframework.boot") version "3.0.1" apply false
+    kotlin("jvm") version "1.8.22" apply false
+    kotlin("plugin.spring") version "1.8.22" apply false
+    kotlin("plugin.jpa") version "1.8.22" apply false
+    kotlin("plugin.allopen") version "1.8.22" apply false
+    id("org.springframework.boot") version "3.1.2" apply false
     id("org.jruyi.thrift") version "0.4.2" apply false
-    id("org.openjfx.javafxplugin") version "0.0.13" apply false
+    id("org.openjfx.javafxplugin") version "0.0.14" apply false
     id("org.beryx.jlink") version "2.26.0" apply false
 }
 
@@ -27,11 +27,5 @@ allprojects {
         useJUnitPlatform()
     }
 
-    tasks.withType<KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = javaVersion
-            freeCompilerArgs = listOf("-Xjsr305=strict")
-        }
-    }
-
+    extensions.findByType<KotlinTopLevelExtension>()?.jvmToolchain(11)
 }
