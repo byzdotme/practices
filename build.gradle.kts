@@ -18,14 +18,16 @@ version = "1.0.0"
 
 allprojects {
 
-    extensions.findByType<JavaPluginExtension>()?.run {
+    extensions.findByType<JavaPluginExtension>()?.apply {
         sourceCompatibility = JavaVersion.toVersion(javaVersion)
         targetCompatibility = JavaVersion.toVersion(javaVersion)
+    }
+    extensions.findByType<KotlinTopLevelExtension>()?.apply {
+        jvmToolchain(11)
     }
 
     tasks.withType<Test> {
         useJUnitPlatform()
     }
 
-    extensions.findByType<KotlinTopLevelExtension>()?.jvmToolchain(11)
 }
