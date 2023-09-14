@@ -1,17 +1,10 @@
 plugins {
     `java-library`
-    id("org.jruyi.thrift")
+    id("cn.bootz.thrift") version "0.0.1"
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 java.targetCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
-    implementation(libs.thrift.lib)
-}
-
-
-tasks.withType<org.jruyi.gradle.thrift.plugin.CompileThrift> {
-    thriftExecutable = "thrift"
-    generator("java", "private-members", "fullcamel", "generated_annotations=undated", "option_type")
 }

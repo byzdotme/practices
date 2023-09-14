@@ -10,3 +10,13 @@ include("krystal")
 include("java17")
 include("elktry")
 include("jfxtry")
+include("drift-practice")
+
+
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+    }
+}
+include("reactive-practice")
