@@ -20,3 +20,4 @@ pluginManagement {
     }
 }
 include("reactive-practice")
+include("manifold-practice")
