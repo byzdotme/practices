@@ -11,6 +11,10 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     implementation(libs.manifold.all)
     implementation("org.slf4j:slf4j-simple:2.0.9")

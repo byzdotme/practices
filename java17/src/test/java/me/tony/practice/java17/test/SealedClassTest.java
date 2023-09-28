@@ -32,10 +32,6 @@ public class SealedClassTest {
     }
 
     String switchShape(Shape shape) {
-        return switch (shape) {
-            case null -> "null";
-            case RegularTriangle rt -> rt.description();
-            default -> "unknown";
-        };
+        return "";
     }
 }

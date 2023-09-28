@@ -20,4 +20,5 @@ pluginManagement {
     }
 }
 include("reactive-practice")
+include("java21")
 include("manifold-practice")
