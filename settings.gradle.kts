@@ -11,7 +11,9 @@ include("java17")
 include("elktry")
 include("jfxtry")
 include("drift-practice")
-
+include("reactive-practice")
+include("java21")
+include("manifold-practice")
 
 pluginManagement {
     repositories {
@@ -19,6 +21,3 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-include("reactive-practice")
-include("java21")
-include("manifold-practice")

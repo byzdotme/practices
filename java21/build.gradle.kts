@@ -20,6 +20,7 @@ tasks.test {
     useJUnitPlatform()
 }
 
+// see https://docs.gradle.org/current/userguide/building_java_projects.html#sec:feature_preview
 tasks.withType<JavaCompile>().configureEach {
     options.compilerArgs.add("--enable-preview")
 }
