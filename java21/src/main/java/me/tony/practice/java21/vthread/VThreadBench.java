@@ -8,6 +8,9 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
 import java.util.Base64;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -55,12 +58,10 @@ public class VThreadBench implements AutoCloseable {
             IntStream.range(1, num + 1).forEach(idx -> executor.submit(() -> {
                 var start = System.currentTimeMillis();
                 try {
-//            log.info("idx:{} before request", idx);
                     HttpResponse<String> resp = http.send(HttpRequest.newBuilder().uri(URI.create("https://www.baidu.com/")).GET().build(), HttpResponse.BodyHandlers.ofString());
                     byte[] encode = Base64.getEncoder().encode(resp.body().getBytes());
-//            log.info("idx:{} after request. resp status:{}. cost:{}", idx, resp.statusCode(), System.currentTimeMillis() - start);
-                } catch (IOException | InterruptedException e) {
-//            log.error("idx:{} request fail. cost:{}", idx, System.currentTimeMillis() - start, e);
+                    log.info("[{}] {} encoded response size:{}", flag, idx, encode.length);
+                } catch (IOException | InterruptedException _) {
                 } finally {
                     final var cost = System.currentTimeMillis() - start;
                     cnt.addAndGet(1);
@@ -70,7 +71,7 @@ public class VThreadBench implements AutoCloseable {
             }));
             cdl.await();
             var t = System.currentTimeMillis() - begin;
-            log.info("[{}]total cost:{} ms. sum cost:{} ms. avg:{} ms. parallelism:{}", flag, t, costs.get(), (double) costs.get() / cnt.get(), (double) costs.get() * num / cnt.get() / t);
+            log.info("[{}]total cost:{} ms. sum cost:{} ms. avg:{} ms. parallelism:{}", flag, t, costs.get(), (double) costs.get() / cnt.get(), (double) costs.get() / t);
         }
     }
 }

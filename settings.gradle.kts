@@ -14,6 +14,7 @@ include("drift-practice")
 include("reactive-practice")
 include("java21")
 include("manifold-practice")
+include("xa-practice")
 
 pluginManagement {
     repositories {
@@ -21,3 +22,15 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+dependencyResolutionManagement { 
+    versionCatalogs { 
+        create("xa") {
+            version("springboot", "2.7.17")
+            
+            library("springboot-base", "org.springframework.boot", "spring-boot-starter").versionRef("springboot")
+            library("springboot-jta-atomikos", "org.springframework.boot", "spring-boot-starter-jta-atomikos").versionRef("springboot")
+        }
+    }
+}
+

@@ -1,9 +1,9 @@
 package me.tony.practice.web.biz
 
+import jakarta.servlet.http.HttpServletRequest
 import org.springframework.beans.factory.InitializingBean
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
-import javax.servlet.http.HttpServletRequest
 
 /**
  * @author tony.zhuby

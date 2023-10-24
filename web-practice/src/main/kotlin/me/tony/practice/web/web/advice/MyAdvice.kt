@@ -1,11 +1,11 @@
 package me.tony.practice.web.web.advice
 
+import jakarta.validation.ValidationException
 import me.tony.practice.web.model.WebApiResult
 import org.springframework.http.HttpStatus
 import org.springframework.ui.Model
 import org.springframework.validation.BindException
 import org.springframework.web.bind.annotation.*
-import javax.validation.ValidationException
 
 /**
  * @author tony.zhuby
@@ -50,6 +50,6 @@ class MyAdvice {
                 ex.bindingResult.allErrors.mapNotNull { it.defaultMessage }.toList()
             )
         }
-        return WebApiResult<Any>(HttpStatus.BAD_REQUEST.value(), ex.message)
+        return WebApiResult<Any>(HttpStatus.BAD_REQUEST.value(), ex.message ?: "")
     }
 }

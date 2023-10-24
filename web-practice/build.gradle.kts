@@ -6,6 +6,10 @@ plugins {
     id("org.springframework.boot")
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 allOpen {
     annotations("javax.persistence.Entity", "javax.persistence.MappedSuperclass", "javax.persistence.Embedabble")
 }
@@ -13,13 +17,9 @@ allOpen {
 dependencies {
     implementation(libs.jackson.module.kotlin)
     implementation(libs.springboot.validation)
-    implementation(libs.springboot.web) {
-        exclude(module = "spring-boot-starter-tomcat")
-    }
-
-    implementation(libs.springboot.undertow)
+    implementation(libs.springboot.web)
     implementation(libs.springboot.jpa)
-    implementation("org.postgresql:postgresql:42.5.1")
+    implementation("org.postgresql:postgresql:42.6.0")
 
     testImplementation(libs.springboot.test)
 }
