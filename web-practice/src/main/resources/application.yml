@@ -1,13 +1,25 @@
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:55000/tony_demo
-    username: tony
-    password: 123456
-    hikari:
-      register-mbeans: true
+    first:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:55007/foo_db
+      username: postgres
+      password: 123456
+      hikari:
+        register-mbeans: true
+    second:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:55009/foo_db
+      username: postgres
+      password: 123456
+      hikari:
+        register-mbeans: true
   jpa:
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 

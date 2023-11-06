@@ -1,15 +1,19 @@
 [versions]
-kotlinx-coroutines = "1.7.3"
+kotlin = "1.8.22"
+kotlinx-coroutines = "1.6.4"
+kotlinx-serialization = "1.5.1"
 springboot = "3.1.5"
 spring-statemachine = "3.2.1"
 jackson = "2.15.3"
 drift = "1.21"
 slf4j = "2.0.9"
+flink = "1.18.0"
 
 manifold = "2023.1.27"
 
 [libraries]
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "kotlinx-serialization" }
 
 springboot-base = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springboot" }
 springboot-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "springboot" }
@@ -36,6 +40,11 @@ drift-client = { module = "io.airlift.drift:drift-client", version.ref = "drift"
 drift-server = { module = "io.airlift.drift:drift-server", version.ref = "drift" }
 drift-transport-netty = { module = "io.airlift.drift:drift-transport-netty", version.ref = "drift" }
 
+flink-clients = { module = "org.apache.flink:flink-clients", version.ref="flink"}
+flink-streaming-java = { module = "org.apache.flink:flink-streaming-java", version.ref="flink"}
+flink-table-api-java = { module = "org.apache.flink:flink-table-api-java", version.ref="flink"}
+flink-table-api-bridge-java = { module = "org.apache.flink:flink-table-api-java-bridge", version.ref="flink"}
+
 manifold-rt-json = { module = "systems.manifold:manifold-json-rt", version.ref = "manifold" }
 manifold-rt-props = { module = "systems.manifold:manifold-props-rt", version.ref = "manifold" }
 manifold-rt-delegation = { module = "systems.manifold:manifold-delegation-rt", version.ref = "manifold" }
@@ -50,3 +59,12 @@ slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 lombok = { module = "org.projectlombok:lombok", version = "1.18.30" }
 
 [bundles]
+flink = ["flink-clients", "flink-streaming-java", "flink-table-api-java", "flink-table-api-bridge-java"]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+kotlin-plugin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
+kotlin-plugin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+springboot = { id = "org.springframework.boot", version.ref = "springboot" }
+

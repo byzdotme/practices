@@ -8,6 +8,9 @@ dependencies {
     implementation(libs.jackson.module.kotlin)
 }
 
+kotlin {
+    jvmToolchain(17)
+}
 
 abstract class GreetingToFileTask : DefaultTask() {
 

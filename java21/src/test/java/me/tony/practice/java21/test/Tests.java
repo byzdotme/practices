@@ -13,6 +13,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDate;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -117,6 +118,17 @@ public class Tests {
         if (obj instanceof WorkCard(Long stuffId, String stuffName, Gender gender, String contact, Job job)) {
             log.info("find {},s work card:\n{}", stuffName, ((WorkCard) obj).card());
         }
+    }
+
+    @Test
+    public void fun() {
+        final var i = new AtomicInteger(10);
+        if (LocalDate.now().isAfter(LocalDate.of(2023, 10, 31))) {
+            i.set(20);
+        }
+        IntStream.range(0, 10).forEach(idx -> {
+            System.out.println(STR."\{idx}- \{i.get()}");
+        });
     }
 
 }

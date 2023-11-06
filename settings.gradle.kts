@@ -33,4 +33,4 @@ dependencyResolutionManagement {
         }
     }
 }
-
+include("flink-practice")
