@@ -6,6 +6,7 @@ import org.apache.flink.api.common.typeinfo.Types
 import org.apache.flink.configuration.Configuration
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
 import org.apache.flink.streaming.api.functions.KeyedProcessFunction
+import org.apache.flink.table.api.ApiExpression
 import org.apache.flink.table.api.Expressions.`$`
 import org.apache.flink.table.api.Table
 import org.apache.flink.util.Collector
@@ -16,7 +17,7 @@ class Detector : KeyedProcessFunction<String, RequestEntity, ResponseEntity>() {
     var state: ValueState<Boolean>? = null
 
     override fun open(parameters: Configuration?) {
-        val des = ValueStateDescriptor<Boolean>("flag", Types.BOOLEAN)
+        val des = ValueStateDescriptor("flag", Types.BOOLEAN)
         state = runtimeContext.getState(des)
     }
 

@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm")
+    alias { libs.plugins.kotlin.jvm }
     id("application")
     id("org.openjfx.javafxplugin")
 }

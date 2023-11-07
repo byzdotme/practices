@@ -2,7 +2,9 @@ package me.tony.practice.web.test
 
 import me.tony.practice.web.AppMain
 import me.tony.practice.web.dal.entity.AccountBase
+import me.tony.practice.web.dal.entity.User
 import me.tony.practice.web.dal.repository.AccountBaseRepository
+import me.tony.practice.web.dal.repository.UserRepository
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -12,12 +14,12 @@ import org.springframework.boot.test.context.SpringBootTest
 class JpaTest {
 
     @Autowired
-    lateinit var accountBaseRepository: AccountBaseRepository
+    lateinit var repository: UserRepository
 
 
     @Test
     fun testFindById() {
-        val findById = accountBaseRepository.findById(10)
+        val findById = repository.findById(10)
         findById.ifPresentOrElse({ println(it) }) {
             println("none")
         }
@@ -25,16 +27,24 @@ class JpaTest {
 
     @Test
     fun testInsert() {
-        val entity = AccountBase()
-        entity.login = "tonyaccount4"
-        entity.password = "123456"
-        accountBaseRepository.save(entity)
+        val entity = User()
+        entity.login = "bootz4"
+        repository.save(entity)
+        println(entity)
     }
 
     @Test
     fun testUpdate() {
-//        val entity = AccountBase(id = 10, password = "111222333")
-//        accountBaseRepository.save(entity)
-//        accountBaseRepository.
+        val findById = repository.findById(10)
+        findById.ifPresent {
+            println("before: $it")
+            it.avatar = "new.png"
+            repository.save(it)
+            println("after: $it")
+        }
+        val opt = repository.findById(10)
+        opt.ifPresent {
+            println("new: $it")
+        }
     }
 }

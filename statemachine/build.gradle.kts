@@ -1,7 +1,7 @@
 plugins {
-    kotlin("jvm")
-    kotlin("plugin.spring")
-    id("org.springframework.boot")
+    alias { libs.plugins.kotlin.jvm }
+    alias { libs.plugins.kotlin.plugin.spring }
+    alias { libs.plugins.springboot }
 }
 
 dependencies {

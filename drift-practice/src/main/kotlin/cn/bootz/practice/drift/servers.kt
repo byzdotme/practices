@@ -3,6 +3,7 @@ package cn.bootz.practice.drift
 import cn.bootz.practice.drift.api.FooRequest
 import cn.bootz.practice.drift.api.FooService
 import io.airlift.drift.codec.ThriftCodecManager
+import io.airlift.drift.codec.internal.reflection.ReflectionThriftCodecFactory
 import io.airlift.drift.server.DriftServer
 import io.airlift.drift.server.DriftService
 import io.airlift.drift.server.stats.NullMethodInvocationStatsFactory
@@ -19,7 +20,7 @@ class FooServiceImpl : FooService {
 fun main() {
     val server = DriftServer(
         DriftNettyServerTransportFactory(DriftNettyServerConfig().setPort(8411)),
-        ThriftCodecManager(),
+        codecManager,
         NullMethodInvocationStatsFactory(),
         mutableSetOf(DriftService(FooServiceImpl())),
         mutableSetOf()

@@ -1,9 +1,9 @@
 plugins {
-    kotlin("jvm")
-    kotlin("plugin.spring")
-    kotlin("plugin.jpa")
-    kotlin("plugin.allopen")
-    id("org.springframework.boot")
+    alias { libs.plugins.kotlin.jvm }
+    alias { libs.plugins.kotlin.plugin.allopen }
+    alias { libs.plugins.kotlin.plugin.jpa }
+    alias { libs.plugins.kotlin.plugin.spring }
+    alias { libs.plugins.springboot }
 }
 
 kotlin {

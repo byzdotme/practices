@@ -6,8 +6,12 @@ import io.airlift.drift.annotations.ThriftStruct
 @ThriftStruct
 class FooRequest {
 
-    @get:ThriftField(value = 1, requiredness = ThriftField.Requiredness.REQUIRED)
-    @set:ThriftField
+    @set:ThriftField(value = 1, requiredness = ThriftField.Requiredness.REQUIRED)
+    @get:ThriftField
+    var prefix: String? = null
+
+    @set:ThriftField(value = 2, requiredness = ThriftField.Requiredness.REQUIRED)
+    @get:ThriftField
     var foo: String? = null
 
     override fun toString(): String {

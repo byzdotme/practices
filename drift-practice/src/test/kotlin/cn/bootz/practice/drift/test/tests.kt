@@ -9,10 +9,10 @@ class CommonTest {
 
     @Test
     fun testNullCheck() {
-        val res = client.get()
-            .unboxFoo(
-                FooRequest()
-            )
+        val request = FooRequest()
+//        request.prefix = "haha"
+//        request.foo = "haha"
+        val res = client.get().unboxFoo(request)
         println("result is $res")
     }
 }

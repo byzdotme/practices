@@ -1,21 +1,12 @@
 spring:
   datasource:
-    first:
-      type: com.zaxxer.hikari.HikariDataSource
-      driver-class-name: org.postgresql.Driver
-      url: jdbc:postgresql://localhost:55007/foo_db
-      username: postgres
-      password: 123456
-      hikari:
-        register-mbeans: true
-    second:
-      type: com.zaxxer.hikari.HikariDataSource
-      driver-class-name: org.postgresql.Driver
-      url: jdbc:postgresql://localhost:55009/foo_db
-      username: postgres
-      password: 123456
-      hikari:
-        register-mbeans: true
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/bootz_db
+    username: bootz
+    password: 123456
+    hikari:
+      register-mbeans: true
   jpa:
     database: postgresql
     show-sql: true

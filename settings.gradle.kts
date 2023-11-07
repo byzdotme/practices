@@ -15,6 +15,7 @@ include("reactive-practice")
 include("java21")
 include("manifold-practice")
 include("xa-practice")
+include("flink-practice")
 
 pluginManagement {
     repositories {
@@ -23,14 +24,23 @@ pluginManagement {
     }
 }
 
-dependencyResolutionManagement { 
-    versionCatalogs { 
+dependencyResolutionManagement {
+    versionCatalogs {
         create("xa") {
+            version("kotlin", "1.6.21")
             version("springboot", "2.7.17")
-            
+            version("jackson", "2.13.5")
+
+            library("jackson-module-kotlin", "com.fasterxml.jackson.module", "jackson-module-kotlin").versionRef("jackson")
             library("springboot-base", "org.springframework.boot", "spring-boot-starter").versionRef("springboot")
+            library("springboot-web", "org.springframework.boot", "spring-boot-starter-web").versionRef("springboot")
+            library("springboot-jpa", "org.springframework.boot", "spring-boot-starter-data-jpa").versionRef("springboot")
             library("springboot-jta-atomikos", "org.springframework.boot", "spring-boot-starter-jta-atomikos").versionRef("springboot")
+
+            plugin("kotlin.jvm", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
+            plugin("kotlin.plugin.spring", "org.jetbrains.kotlin.plugin.spring").versionRef("kotlin")
+            plugin("kotlin.plugin.jpa", "org.jetbrains.kotlin.plugin.jpa").versionRef("kotlin")
+            plugin("springboot", "org.springframework.boot").versionRef("springboot")
         }
     }
 }
-include("flink-practice")

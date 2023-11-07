@@ -40,10 +40,10 @@ drift-client = { module = "io.airlift.drift:drift-client", version.ref = "drift"
 drift-server = { module = "io.airlift.drift:drift-server", version.ref = "drift" }
 drift-transport-netty = { module = "io.airlift.drift:drift-transport-netty", version.ref = "drift" }
 
-flink-clients = { module = "org.apache.flink:flink-clients", version.ref="flink"}
-flink-streaming-java = { module = "org.apache.flink:flink-streaming-java", version.ref="flink"}
-flink-table-api-java = { module = "org.apache.flink:flink-table-api-java", version.ref="flink"}
-flink-table-api-bridge-java = { module = "org.apache.flink:flink-table-api-java-bridge", version.ref="flink"}
+flink-clients = { module = "org.apache.flink:flink-clients", version.ref = "flink" }
+flink-streaming-java = { module = "org.apache.flink:flink-streaming-java", version.ref = "flink" }
+flink-table-api-java = { module = "org.apache.flink:flink-table-api-java", version.ref = "flink" }
+flink-table-api-bridge-java = { module = "org.apache.flink:flink-table-api-java-bridge", version.ref = "flink" }
 
 manifold-rt-json = { module = "systems.manifold:manifold-json-rt", version.ref = "manifold" }
 manifold-rt-props = { module = "systems.manifold:manifold-props-rt", version.ref = "manifold" }
@@ -60,6 +60,7 @@ lombok = { module = "org.projectlombok:lombok", version = "1.18.30" }
 
 [bundles]
 flink = ["flink-clients", "flink-streaming-java", "flink-table-api-java", "flink-table-api-bridge-java"]
+drift = ["drift-client", "drift-server", "drift-transport-netty"]
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
