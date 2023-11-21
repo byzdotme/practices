@@ -19,6 +19,10 @@ dependencies {
     implementation(libs.springboot.validation)
     implementation(libs.springboot.web)
     implementation(libs.springboot.jpa)
+
+    implementation(platform(libs.springcloud.bom))
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+
     implementation("org.postgresql:postgresql:42.6.0")
 
     testImplementation(libs.springboot.test)

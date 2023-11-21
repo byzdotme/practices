@@ -2,8 +2,12 @@ plugins {
     java
 }
 
-java.sourceCompatibility = JavaVersion.VERSION_17
-java.targetCompatibility = JavaVersion.VERSION_17
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 
 dependencies {
     implementation(libs.slf4j.simple)

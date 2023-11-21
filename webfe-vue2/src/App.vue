@@ -1,11 +1,11 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-new Vue({
-  data: {
-    type: 'C'
-  }
-})
+var type = 'A'
+let arr = ['a', 'b', 'c']
+function add1() {
+  arr.every( (v, i , a) => a[i] = v +1)
+}
 </script>
 
 <template>
@@ -14,6 +14,10 @@ new Vue({
     <div v-else-if="type == 'B'">B</div>
     <div v-else-if="type == 'C'">C</div>
     <div v-else>others</div>
+    <ol>
+      <li v-for="(item, idx) in arr">{{ idx }} - {{ item }}</li>
+  </ol>
+  <button v-on:click="add1()">click</button>
   </div>
 </template>
 
