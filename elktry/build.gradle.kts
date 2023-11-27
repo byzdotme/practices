@@ -11,4 +11,6 @@ dependencies {
     implementation(libs.springboot.web)
     implementation(libs.springboot.es)
     implementation(libs.jackson.module.kotlin)
+    testImplementation(libs.kotlin.test.junit5)
+    testImplementation(libs.springboot.test)
 }

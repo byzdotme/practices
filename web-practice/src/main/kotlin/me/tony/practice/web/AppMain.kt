@@ -1,7 +1,5 @@
 package me.tony.practice.web
 
-import com.fasterxml.jackson.databind.ObjectMapper
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.transaction.annotation.EnableTransactionManagement
@@ -13,9 +11,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement
 @SpringBootApplication
 @EnableTransactionManagement
 class AppMain {
-
-    @Autowired
-    lateinit var objectMapper:ObjectMapper
 
     companion object {
         @JvmStatic
