@@ -11,14 +11,17 @@ kotlin {
 }
 
 allOpen {
-    annotations("javax.persistence.Entity", "javax.persistence.MappedSuperclass", "javax.persistence.Embedabble")
+    annotations("jakarta.persistence.Entity", "jakarta.persistence.MappedSuperclass", "jakarta.persistence.Embeddable")
 }
 
 dependencies {
+    implementation(platform(libs.springboot.bom))
     implementation(libs.jackson.module.kotlin)
     implementation(libs.springboot.validation)
     implementation(libs.springboot.web)
     implementation(libs.springboot.jpa)
+
+    implementation("org.eclipse:yasson")
 
     implementation(platform(libs.springcloud.bom))
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
