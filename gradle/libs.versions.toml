@@ -4,7 +4,7 @@ kotlinx-coroutines = "1.7.3"
 kotlinx-serialization = "1.6.1"
 springboot = "3.2.0"
 springcloud = "2022.0.4"
-spring-statemachine = "3.2.1"
+spring-statemachine = "4.0.0"
 jackson = "2.15.3"
 drift = "1.21"
 slf4j = "2.0.9"
@@ -38,7 +38,7 @@ jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-
 
 guava = { module = "com.google.guava:guava", version = "31.1-jre" }
 
-thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.17.0" }
+thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.19.0" }
 
 ms-thrifty = { module = "com.microsoft.thrifty:thrifty-runtime-jvm", version = "3.1.0" }
 
