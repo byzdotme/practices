@@ -16,19 +16,19 @@ include("java21")
 include("manifold-practice")
 include("xa-practice")
 include("flink-practice")
-
-pluginManagement {
-    repositories {
-        mavenLocal()
-        gradlePluginPortal()
-    }
-}
+//
+//pluginManagement {
+//    repositories {
+//        mavenLocal()
+//        gradlePluginPortal()
+//    }
+//}
 
 dependencyResolutionManagement {
     versionCatalogs {
         create("xa") {
             version("kotlin", "1.6.21")
-            version("springboot", "2.7.17")
+            version("springboot", "2.7.18")
             version("jackson", "2.13.5")
 
             library("jackson-module-kotlin", "com.fasterxml.jackson.module", "jackson-module-kotlin").versionRef("jackson")

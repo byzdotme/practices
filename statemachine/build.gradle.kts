@@ -10,4 +10,5 @@ dependencies {
     implementation(libs.spring.statemachine.starter) {
         exclude(group = "org.springframework.boot")
     }
+    implementation("org.springframework.statemachine:spring-statemachine-data-mongodb:4.0.0")
 }

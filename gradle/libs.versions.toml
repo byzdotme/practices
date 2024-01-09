@@ -1,9 +1,9 @@
 [versions]
-kotlin = "1.9.20"
+kotlin = "1.9.21"
 kotlinx-coroutines = "1.7.3"
-kotlinx-serialization = "1.6.1"
-springboot = "3.2.0"
-springcloud = "2022.0.4"
+kotlinx-serialization = "1.6.2"
+springboot = "3.2.1"
+springcloud = "2023.0.0"
 spring-statemachine = "4.0.0"
 jackson = "2.15.3"
 drift = "1.21"

@@ -2,6 +2,7 @@ package me.tony.practice.web
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.cloud.openfeign.EnableFeignClients
 import org.springframework.transaction.annotation.EnableTransactionManagement
 
 /**
@@ -10,12 +11,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement
  */
 @SpringBootApplication
 @EnableTransactionManagement
-class AppMain {
+@EnableFeignClients
+class AppMain
 
-    companion object {
-        @JvmStatic
-        fun main(args: Array<String>) {
-            runApplication<AppMain>(*args)
-        }
-    }
+fun main(args: Array<String>) {
+    runApplication<AppMain>(*args)
 }

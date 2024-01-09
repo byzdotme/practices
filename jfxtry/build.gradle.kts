@@ -11,7 +11,7 @@ dependencies {
 }
 
 javafx {
-    version = "17.0.2"
+    version = "21.0.1"
     modules = listOf("javafx.fxml", "javafx.web")
 }
 
