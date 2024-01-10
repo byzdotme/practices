@@ -14,7 +14,7 @@ include("drift-practice")
 include("reactive-practice")
 include("java21")
 include("manifold-practice")
-include("xa-practice")
+//include("xa-practice")
 include("flink-practice")
 //
 //pluginManagement {

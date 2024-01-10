@@ -16,6 +16,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.meituan.mdp.boot</groupId>
+            <artifactId>mdp-boot-starter-web</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
             <groupId>com.facebook.swift</groupId>
             <artifactId>swift-annotations</artifactId>
             <version>0.23.1</version>
