@@ -1,13 +1,13 @@
 [versions]
-kotlin = "1.9.21"
+kotlin = "1.9.22"
 kotlinx-coroutines = "1.7.3"
 kotlinx-serialization = "1.6.2"
-springboot = "3.2.1"
+springboot = "3.2.2"
 springcloud = "2023.0.0"
 spring-statemachine = "4.0.0"
 jackson = "2.15.3"
 drift = "1.21"
-slf4j = "2.0.9"
+slf4j = "2.0.11"
 flink = "1.18.0"
 
 manifold = "2023.1.30"
@@ -37,7 +37,7 @@ spring-statemachine-starter = { module = "org.springframework.statemachine:sprin
 
 jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
 
-guava = { module = "com.google.guava:guava", version = "31.1-jre" }
+guava = { module = "com.google.guava:guava", version = "33.0.0-jre" }
 
 thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.19.0" }
 

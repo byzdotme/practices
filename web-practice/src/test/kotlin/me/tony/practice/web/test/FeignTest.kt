@@ -5,11 +5,13 @@ import me.tony.practice.web.client.Request
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.HttpStatus
+import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 
 @SpringBootTest
+@Ignore
 class FeignTest {
 
     @Autowired

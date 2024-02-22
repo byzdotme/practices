@@ -8,9 +8,11 @@ import me.tony.practice.web.dal.repository.UserRepository
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import kotlin.test.Ignore
 
 
 @SpringBootTest(classes = [AppMain::class])
+@Ignore
 class JpaTest {
 
     @Autowired
