@@ -1,13 +1,13 @@
 [versions]
 kotlin = "1.9.22"
 kotlinx-coroutines = "1.7.3"
-kotlinx-serialization = "1.6.2"
-springboot = "3.2.2"
+kotlinx-serialization = "1.6.3"
+springboot = "3.2.3"
 springcloud = "2023.0.0"
 spring-statemachine = "4.0.0"
-jackson = "2.15.3"
+jackson = "2.15.4"
 drift = "1.21"
-slf4j = "2.0.11"
+slf4j = "2.0.12"
 flink = "1.18.0"
 
 manifold = "2023.1.30"
