@@ -10,7 +10,7 @@ drift = "1.21"
 slf4j = "2.0.12"
 flink = "1.18.0"
 
-manifold = "2023.1.30"
+manifold = "2024.1.1"
 
 [libraries]
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }

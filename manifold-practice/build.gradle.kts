@@ -8,19 +8,14 @@ version = "1.0.0"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
-}
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
     implementation(libs.manifold.all)
-    implementation("org.slf4j:slf4j-simple:2.0.9")
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation(libs.slf4j.simple)
+    testImplementation(libs.kotlin.test.junit5)
     annotationProcessor(libs.manifold.all)
     testAnnotationProcessor(libs.manifold.all)
 }
