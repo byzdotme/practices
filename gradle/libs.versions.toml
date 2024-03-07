@@ -12,6 +12,8 @@ flink = "1.18.0"
 
 manifold = "2024.1.1"
 
+asm = "9.6"
+
 [libraries]
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-test-base = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }

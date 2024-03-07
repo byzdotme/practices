@@ -5,21 +5,18 @@ plugins {
 group = "cn.bootz.teldrassil"
 version = "1.0.0"
 
-val asmVersion = "9.6"
-
 dependencies {
     implementation(libs.slf4j.simple)
     implementation(libs.lombok)
     implementation(libs.springboot.web)
     implementation("com.google.code.gson:gson:2.10.1")
-    implementation("org.ow2.asm:asm:$asmVersion")
-    implementation("org.ow2.asm:asm-util:$asmVersion")
-    implementation("org.ow2.asm:asm-commons:$asmVersion")
-    implementation("org.ow2.asm:asm-tree:$asmVersion")
-    implementation("org.ow2.asm:asm-analysis:$asmVersion")
-    testImplementation(platform("org.junit:junit-bom:5.9.3"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("org.ow2.asm:asm-test:$asmVersion")
+    implementation("org.ow2.asm:asm:${libs.versions.asm}")
+    implementation("org.ow2.asm:asm-util:${libs.versions.asm}")
+    implementation("org.ow2.asm:asm-commons:${libs.versions.asm}")
+    implementation("org.ow2.asm:asm-tree:${libs.versions.asm}")
+    implementation("org.ow2.asm:asm-analysis:${libs.versions.asm}")
+    testImplementation(libs.kotlin.test.junit5)
+    testImplementation("org.ow2.asm:asm-test:${libs.versions.asm}")
     annotationProcessor(libs.lombok)
 }
 

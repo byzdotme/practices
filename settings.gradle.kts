@@ -34,11 +34,24 @@ dependencyResolutionManagement {
             version("springboot", "2.7.18")
             version("jackson", "2.13.5")
 
-            library("jackson-module-kotlin", "com.fasterxml.jackson.module", "jackson-module-kotlin").versionRef("jackson")
+            library("kotlin-test-junit5", "org.jetbrains.kotlin", "kotlin-test-junit5").versionRef("kotlin")
+            library(
+                "jackson-module-kotlin",
+                "com.fasterxml.jackson.module",
+                "jackson-module-kotlin"
+            ).versionRef("jackson")
             library("springboot-base", "org.springframework.boot", "spring-boot-starter").versionRef("springboot")
             library("springboot-web", "org.springframework.boot", "spring-boot-starter-web").versionRef("springboot")
-            library("springboot-jpa", "org.springframework.boot", "spring-boot-starter-data-jpa").versionRef("springboot")
-            library("springboot-jta-atomikos", "org.springframework.boot", "spring-boot-starter-jta-atomikos").versionRef("springboot")
+            library(
+                "springboot-jpa",
+                "org.springframework.boot",
+                "spring-boot-starter-data-jpa"
+            ).versionRef("springboot")
+            library(
+                "springboot-jta-atomikos",
+                "org.springframework.boot",
+                "spring-boot-starter-jta-atomikos"
+            ).versionRef("springboot")
 
             plugin("kotlin.jvm", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
             plugin("kotlin.plugin.spring", "org.jetbrains.kotlin.plugin.spring").versionRef("kotlin")
