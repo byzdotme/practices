@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      username: bootz
+      password: 123456
+    url: jdbc:postgresql://localhost:5432/practice
+  jackson:
+    time-zone: GMT+8
+  jpa:
+    hibernate:
+      ddl-auto: none
