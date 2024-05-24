@@ -70,9 +70,9 @@ manifold-strings = { module = "systems.manifold:manifold-strings", version.ref =
 manifold-all = { module = "systems.manifold:manifold-all", version.ref = "manifold" }
 
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
-lombok = { module = "org.projectlombok:lombok", version = "1.18.30" }
+lombok = { module = "org.projectlombok:lombok", version = "1.18.32" }
 
-postgres-driver = "org.postgresql:postgresql:42.6.2"
+postgres-driver = "org.postgresql:postgresql:42.7.3"
 h2 = "com.h2database:h2:2.2.224"
 
 [bundles]
