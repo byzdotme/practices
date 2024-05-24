@@ -1,14 +1,15 @@
 [versions]
-kotlin = "1.9.23"
-kotlinx-coroutines = "1.7.3"
+kotlin = "2.0.0"
+kotlinx-coroutines = "1.8.1"
 kotlinx-serialization = "1.6.3"
-springboot = "3.2.4"
+springboot = "3.2.5"
 springcloud = "2023.0.0"
 spring-statemachine = "4.0.0"
 jackson = "2.15.4"
 drift = "1.21"
-slf4j = "2.0.12"
+slf4j = "2.0.13"
 flink = "1.18.0"
+storm = "2.6.1"
 
 manifold = "2024.1.1"
 
@@ -56,6 +57,8 @@ flink-streaming-java = { module = "org.apache.flink:flink-streaming-java", versi
 flink-table-api-java = { module = "org.apache.flink:flink-table-api-java", version.ref = "flink" }
 flink-table-api-bridge-java = { module = "org.apache.flink:flink-table-api-java-bridge", version.ref = "flink" }
 
+storm-client = { module = 'org.apache.storm:storm-client', version.ref = 'storm' }
+
 manifold-rt-json = { module = "systems.manifold:manifold-json-rt", version.ref = "manifold" }
 manifold-rt-props = { module = "systems.manifold:manifold-props-rt", version.ref = "manifold" }
 manifold-rt-delegation = { module = "systems.manifold:manifold-delegation-rt", version.ref = "manifold" }
@@ -75,6 +78,7 @@ h2 = "com.h2database:h2:2.2.224"
 [bundles]
 flink = ["flink-clients", "flink-streaming-java", "flink-table-api-java", "flink-table-api-bridge-java"]
 drift = ["drift-client", "drift-server", "drift-transport-netty"]
+springboot-test = ["kotlin-test-junit5", "springboot-test"]
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

@@ -10,20 +10,20 @@ dependencies {
     implementation(libs.lombok)
     implementation(libs.springboot.web)
     implementation("com.google.code.gson:gson:2.10.1")
-    implementation("org.ow2.asm:asm:${libs.versions.asm}")
-    implementation("org.ow2.asm:asm-util:${libs.versions.asm}")
-    implementation("org.ow2.asm:asm-commons:${libs.versions.asm}")
-    implementation("org.ow2.asm:asm-tree:${libs.versions.asm}")
-    implementation("org.ow2.asm:asm-analysis:${libs.versions.asm}")
+//    implementation("org.ow2.asm:asm:${libs.versions.asm}")
+//    implementation("org.ow2.asm:asm-util:${libs.versions.asm}")
+//    implementation("org.ow2.asm:asm-commons:${libs.versions.asm}")
+//    implementation("org.ow2.asm:asm-tree:${libs.versions.asm}")
+//    implementation("org.ow2.asm:asm-analysis:${libs.versions.asm}")
+//    implementation("org.antlr:antlr4:4.13.0")
     testImplementation(libs.kotlin.test.junit5)
-    testImplementation("org.ow2.asm:asm-test:${libs.versions.asm}")
+//    testImplementation("org.ow2.asm:asm-test:${libs.versions.asm}")
     annotationProcessor(libs.lombok)
 }
 
 java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
-    }
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 tasks.test {

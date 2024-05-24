@@ -6,6 +6,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
 //    implementation(libs.springboot.base)
     implementation(libs.jackson.module.kotlin)
+    testImplementation(libs.kotlin.test.junit5)
 }
 
 kotlin {

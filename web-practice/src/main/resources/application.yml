@@ -2,7 +2,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/bootz_db
+    url: jdbc:postgresql://localhost:5432/bootz
     username: bootz
     password: 123456
     hikari:
