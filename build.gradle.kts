@@ -8,9 +8,6 @@ plugins {
     id("systems.manifold.manifold-gradle-plugin") version "0.0.2-alpha" apply false
 }
 
-repositories {
-    mavenCentral()
-}
 
 group = "me.tony.practice"
 version = "1.0.0"
