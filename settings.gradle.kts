@@ -63,3 +63,4 @@ dependencyResolutionManagement {
 include("spring-auth-server")
 include("web-security-practice")
 include("storm-practice")
+include("betterjava")

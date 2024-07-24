@@ -13,6 +13,7 @@ dependencies {
     implementation("io.undertow:undertow-core:2.3.13.Final")
     implementation("io.undertow:undertow-servlet:2.3.13.Final")
     implementation("io.undertow:undertow-websockets-jsr:2.3.13.Final")
+    implementation("com.google.code.findbugs:jsr305:3.0.2")
 //    implementation("org.ow2.asm:asm:${libs.versions.asm}")
 //    implementation("org.ow2.asm:asm-util:${libs.versions.asm}")
 //    implementation("org.ow2.asm:asm-commons:${libs.versions.asm}")
