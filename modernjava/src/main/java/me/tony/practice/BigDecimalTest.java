@@ -9,6 +9,5 @@ public class BigDecimalTest {
         BigDecimal b = new BigDecimal("1.00");
         System.out.println(a.compareTo(b));
 
-        BigDecimal.valueOf(1.0);
     }
 }

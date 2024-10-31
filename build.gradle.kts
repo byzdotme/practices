@@ -13,6 +13,11 @@ group = "me.tony.practice"
 version = "1.0.0"
 
 allprojects {
+
+    repositories {
+        mavenCentral()
+    }
+
     tasks.withType<Test> {
         useJUnitPlatform()
     }
