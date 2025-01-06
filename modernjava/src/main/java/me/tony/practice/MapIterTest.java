@@ -6,6 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class MapIterTest {
 
+
     public static void main(String[] args) {
         Map<String, Object> map = new ConcurrentHashMap<>();
         map.put("a", "A");
@@ -18,5 +19,7 @@ public class MapIterTest {
             iterator.remove();
         }
         System.out.println(map.size());
+
+
     }
 }

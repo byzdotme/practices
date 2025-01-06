@@ -15,3 +15,17 @@ spring:
 foo:
   service:
     url: localhost:8080
+
+my:
+  conf:
+    - a
+
+---
+spring:
+  config:
+    activate:
+      on-profile: foo
+my:
+  conf:
+    - c
+    - b

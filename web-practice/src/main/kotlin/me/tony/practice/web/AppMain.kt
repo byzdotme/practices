@@ -4,6 +4,7 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonTypeRef
 import me.tony.practice.web.client.Foo
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
 import org.springframework.cloud.openfeign.EnableFeignClients
 import org.springframework.transaction.annotation.EnableTransactionManagement
@@ -16,6 +17,7 @@ import java.util.ArrayList
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableFeignClients
+@EnableConfigurationProperties
 class AppMain
 
 fun main(args: Array<String>) {
