@@ -21,6 +21,8 @@ dependencies {
     implementation(libs.springboot.validation)
     implementation(libs.springboot.web)
     implementation(libs.springboot.jpa)
+    implementation(libs.kotlinx.serialization.protobuf)
+    implementation(libs.kotlinx.serialization.json)
 
     implementation("org.eclipse:yasson")
 
