@@ -1,14 +1,15 @@
 plugins {
     alias { libs.plugins.kotlin.jvm }
+    alias { libs.plugins.kotlin.plugin.spring }
 }
 
 group = "cn.bootz.teldrassil"
 version = "1.0.0"
 
 dependencies {
-    implementation(libs.springboot.webflux)
-    testImplementation(libs.springboot.test)
-    testImplementation(libs.kotlin.test.junit5)
+    implementation(libs.bundles.kt.springboot.webflux)
+    testImplementation(libs.bundles.kt.springboot.test)
+    testImplementation(libs.reactor.test)
 }
 
 tasks.test {

@@ -10,6 +10,8 @@ drift = "1.21"
 slf4j = "2.0.16"
 flink = "1.18.0"
 storm = "2.6.1"
+reactor = "3.7.1"
+reactor-kt = "1.2.3"
 
 manifold = "2024.1.1"
 
@@ -20,8 +22,12 @@ kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref =
 kotlin-test-base = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor", version.ref = "kotlinx-coroutines" }
 kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "kotlinx-serialization" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+reactor-kotlin-extensions = { module = "io.projectreactor.kotlin:reactor-kotlin-extensions", version.ref = "reactor-kt" }
+reactor-test = { module = "io.projectreactor:reactor-test", version.ref = "reactor" }
 
 springboot-bom = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springboot" }
 springboot-base = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springboot" }
@@ -79,7 +85,9 @@ h2 = "com.h2database:h2:2.2.224"
 [bundles]
 flink = ["flink-clients", "flink-streaming-java", "flink-table-api-java", "flink-table-api-bridge-java"]
 drift = ["drift-client", "drift-server", "drift-transport-netty"]
-springboot-test = ["kotlin-test-junit5", "springboot-test"]
+kt-springboot-test = ["kotlin-test-junit5", "springboot-test"]
+
+kt-springboot-webflux = ["kotlin-reflect", "kotlinx-coroutines-reactor", "springboot-webflux", "reactor-kotlin-extensions", "jackson-module-kotlin"]
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
