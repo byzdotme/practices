@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // see org.jetbrains.kotlin.gradle.plugin.KotlinGradleBuildServices#detectKotlinPluginLoadedInMultipleProjects
@@ -24,7 +25,7 @@ allprojects {
         useJUnitPlatform()
     }
 
-    extensions.findByType<KotlinJvmExtension>()?.apply {
+    tasks.withType<KotlinCompile> {
         compilerOptions {
             freeCompilerArgs.add("-Xjsr305=strict")
         }
