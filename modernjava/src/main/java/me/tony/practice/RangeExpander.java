@@ -3,6 +3,7 @@ package me.tony.practice;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -24,27 +25,23 @@ public class RangeExpander {
         String endStr = matcher.group(3);
         String suffix = matcher.group(4);
 
-        try {
-            int start = parseNumber(startStr);
-            int end = parseNumber(endStr);
-            validateRange(start, end);
-            int padding = startStr.length();
+        int start = parseNumber(startStr);
+        int end = parseNumber(endStr);
+        validateRange(start, end);
+        int padding = startStr.length();
 
-            // 生成当前范围的所有可能值，并递归处理后续范围
-            return IntStream.rangeClosed(start, end)
-                    .mapToObj(i -> String.format("%0" + padding + "d", i))
-                    .map(num -> prefix + num + suffix)
-                    .flatMap(RangeExpander::expandStream);
-        } catch (InvalidRangeException e) {
-            throw new InvalidRangeException("Invalid range in: " + input, e);
-        }
+        // 生成当前范围的所有可能值，并递归处理后续范围
+        return IntStream.rangeClosed(start, end)
+                .mapToObj(i -> String.format("%0" + padding + "d", i))
+                .map(num -> prefix + num + suffix)
+                .flatMap(RangeExpander::expandStream);
     }
 
     /**
      * 直接返回列表（适合小范围）
      */
     public static List<String> expand(String input) {
-        return expandStream(input).toList();
+        return expandStream(input).collect(Collectors.toList());
     }
 
     //------------------------ 工具方法 ------------------------
