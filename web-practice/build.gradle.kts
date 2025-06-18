@@ -20,6 +20,7 @@ dependencies {
     implementation(libs.jackson.module.kotlin)
     implementation(libs.springboot.validation)
     implementation(libs.springboot.web)
+    implementation(libs.springboot.websocket)
     implementation(libs.springboot.jpa)
     implementation(libs.kotlinx.serialization.protobuf)
     implementation(libs.kotlinx.serialization.json)

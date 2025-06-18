@@ -29,3 +29,16 @@ my:
   conf:
     - c
     - b
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: bar
+  profiles: bar
+
+my:
+  conf:
+    - d
+    - e

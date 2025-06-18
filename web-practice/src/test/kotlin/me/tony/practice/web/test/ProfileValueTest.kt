@@ -8,7 +8,7 @@ import org.springframework.test.context.ActiveProfiles
 import kotlin.test.Test
 
 @SpringBootTest(classes = [AppMain::class])
-@ActiveProfiles(profiles = ["foo"])
+@ActiveProfiles(profiles = ["bar"])
 class ProfileValueTest {
 
     @Autowired
