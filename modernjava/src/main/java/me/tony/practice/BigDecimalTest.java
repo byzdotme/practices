@@ -4,10 +4,9 @@ import java.math.BigDecimal;
 
 public class BigDecimalTest {
 
-    public static void main(String[] args) {
+    void main() {
         BigDecimal a = new BigDecimal("1.0");
         BigDecimal b = new BigDecimal("1.00");
-        System.out.println(a.compareTo(b));
-
+        IO.println(a.compareTo(b));
     }
 }

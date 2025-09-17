@@ -6,9 +6,6 @@ plugins {
     alias { libs.plugins.springboot }
 }
 
-kotlin {
-    jvmToolchain(21)
-}
 
 allOpen {
     annotations("jakarta.persistence.Entity", "jakarta.persistence.MappedSuperclass", "jakarta.persistence.Embeddable")

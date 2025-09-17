@@ -1,15 +1,7 @@
 package me.tony.practice;
 
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Base64;
-import java.util.Map;
-import java.util.SortedMap;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
-import java.util.function.Function;
 
 public class Foo {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -70,13 +62,10 @@ public class Foo {
         while (map.size() > 2) {
             Long key = map.firstKey();
             var removed = map.remove(key);
-            System.out.println(STR."remove \{key}, value \{removed}");
+            IO.println(STR."remove \{key}, value \{removed}");
         }
 
 
     }
 
-    static enum FE {
-        A,B,C
-    }
 }

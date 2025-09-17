@@ -8,7 +8,3 @@ dependencies {
     implementation(libs.storm.client)
     testImplementation(libs.kotlin.test.junit5)
 }
-
-kotlin {
-    jvmToolchain(21)
-}

@@ -9,9 +9,6 @@ dependencies {
     testImplementation(libs.kotlin.test.junit5)
 }
 
-kotlin {
-    jvmToolchain(17)
-}
 
 abstract class GreetingToFileTask : DefaultTask() {
 
