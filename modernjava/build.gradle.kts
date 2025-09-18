@@ -32,17 +32,15 @@ java {
 
 tasks.test {
     useJUnitPlatform()
+    jvmArgs("--enable-preview")
 }
 
 // see https://docs.gradle.org/current/userguide/building_java_projects.html#sec:feature_preview
-tasks.withType<JavaCompile>().configureEach {
+tasks.withType<JavaCompile> {
     options.compilerArgs.add("--enable-preview")
 }
 
-tasks.withType<Test>().configureEach {
+tasks.withType<JavaExec> {
     jvmArgs("--enable-preview")
 }
 
-tasks.withType<JavaExec>().configureEach {
-    jvmArgs("--enable-preview")
-}
