@@ -62,7 +62,7 @@ public class Foo {
         while (map.size() > 2) {
             Long key = map.firstKey();
             var removed = map.remove(key);
-            IO.println(STR."remove \{key}, value \{removed}");
+            IO.println("remove " + key + ", value " + removed);
         }
 
 

@@ -23,5 +23,8 @@ dependencies {
     testImplementation(libs.kotlin.test.junit5)
     testImplementation(libs.springboot.test)
     testImplementation(libs.h2)
+    testImplementation(libs.springboot.web.test)
+    testImplementation(libs.springboot.security.test)
+    testImplementation(libs.springboot.jpa.test)
 }
 

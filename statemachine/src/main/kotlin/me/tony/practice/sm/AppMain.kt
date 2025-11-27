@@ -23,7 +23,8 @@ class AppMain : CommandLineRunner {
         }
     }
 
-    override fun run(vararg args: String?) {
+    override fun run(vararg args: String) {
 
     }
+
 }

@@ -28,19 +28,12 @@ public class Foo {
         var s3 = System.currentTimeMillis();
         var l1 = foos.stream().map(Foo::toString).toList();
         var s4 = System.currentTimeMillis();
-        System.out.println(STR."l1 size: \{l1.size()}, cost:\{s2 - s1}, l2 size:\{l2.size()}, cost:\{s3 - s2}, l3 size:\{l3.size()}, cost:\{s4 - s3}");
+        System.out.println("l1 size: " + l1.size() + ", cost:" + (s2 - s1) + ", l2 size:" + l2.size() + ", cost:" + (s3 - s2) + ", l3 size:" + l3.size() + ", cost:" + (s4 - s3));
     }
 
     @Override
     public String toString() {
-        return STR."""
-                {
-                "str1": \{str1},
-                "str2": \{str2},
-                "str3": \{str3},
-                "str4": \{str4},
-                }
-                """;
+        return "{\n\"str1\": " + str1 + ",\n\"str2\": " + str2 + ",\n\"str3\": " + str3 + ",\n\"str4\": " + str4 + ",\n}\n";
     }
 
     public String toStringManual() {

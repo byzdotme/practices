@@ -1,6 +1,6 @@
 package common
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import tools.jackson.module.kotlin.jacksonObjectMapper
 
 
 data class IndexMetaData(var index: String, var indexName: String, var indexSuffix: String)

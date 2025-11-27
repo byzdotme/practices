@@ -1,13 +1,12 @@
 package me.tony.practice.jackson;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import tools.jackson.databind.ObjectMapper;
 
 import java.util.Map;
 
@@ -18,7 +17,7 @@ public class TryJackson {
     static ObjectMapper om = new ObjectMapper();
     static Gson gson = new GsonBuilder().create();
 
-    public static void main(String[] args) throws JsonProcessingException {
+    public static void main(String[] args) {
 
 //        var foo = new Foo();
 //        var bar = new Bar();

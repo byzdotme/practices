@@ -17,7 +17,7 @@ public sealed abstract class Designer implements Job {
     public static final class Junior extends Designer {
         @Override
         public String named() {
-            return STR. "junior \{ super.named() }" ;
+            return "junior " + super.named();
         }
 
         @Override
@@ -30,7 +30,7 @@ public sealed abstract class Designer implements Job {
 
         @Override
         public String named() {
-            return STR. "senior \{ super.named() }" ;
+            return "senior " + super.named();
         }
 
         @Override

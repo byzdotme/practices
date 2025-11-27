@@ -36,7 +36,6 @@ spring:
   config:
     activate:
       on-profile: bar
-  profiles: bar
 
 my:
   conf:

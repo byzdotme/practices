@@ -1,14 +1,12 @@
 package me.tony.practice.web.test.jackson;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import me.tony.practice.web.AppMain;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import tools.jackson.databind.ObjectMapper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +20,7 @@ public class TestJackson {
     private final ObjectMapper om = new ObjectMapper();
 
     @Test
-    public void test() throws JsonProcessingException {
+    public void test() {
         Map<Long, String> map = new HashMap<>();
         map.put(1L, "abc");
         String json = om.writeValueAsString(map);
@@ -30,14 +28,14 @@ public class TestJackson {
     }
 
     @Test
-    public void testMap() throws JsonProcessingException {
+    public void testMap() {
         var json = "{\"foo\":\"abc\",\"bar\":123,\"baz\":true,\"qux\":{\"a\":1,\"b\":2}}";
 //        var map = om.readValue(json, new TypeReference<Map<String, Object>>() {
 //        });
 //        map.forEach((k,v) -> System.out.println(v.getClass()));
         var node = om.readTree(json);
         if (node.isObject()) {
-            node.fields().forEachRemaining(e -> {
+            node.properties().forEach(e -> {
                 System.out.println(e.getKey() + " : " + e.getValue().getNodeType().name());
             });
         }

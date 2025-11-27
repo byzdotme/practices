@@ -1,7 +1,7 @@
 package common
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.fasterxml.jackson.module.kotlin.jacksonTypeRef
+import tools.jackson.module.kotlin.jacksonObjectMapper
+import tools.jackson.module.kotlin.jacksonTypeRef
 import java.nio.file.Files
 import java.nio.file.Paths
 

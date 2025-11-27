@@ -1,5 +1,5 @@
 plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 rootProject.name = "practices"
 
@@ -19,6 +19,11 @@ include("modernjava")
 //include("manifold-practice")
 //include("xa-practice")
 include("flink-practice")
+include("spring-auth-server")
+include("web-security-practice")
+include("storm-practice")
+include("betterjava")
+include("mbdyna")
 //
 //pluginManagement {
 //    repositories {
@@ -60,8 +65,3 @@ dependencyResolutionManagement {
         }
     }
 }
-include("spring-auth-server")
-include("web-security-practice")
-include("storm-practice")
-include("betterjava")
-include("mbdyna")

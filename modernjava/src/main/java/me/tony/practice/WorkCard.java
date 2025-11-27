@@ -18,24 +18,20 @@ public record WorkCard(Long stuffId, String stuffName, Gender gender, String con
     public String named() {
         Object obj = "hello";
         String name = switch (obj) {
-            case String str -> STR."string: \{ str }";
-            case Integer i -> STR."integer: \{ i }";
+            case String str -> "string: " + str;
+            case Integer i -> "integer: " + i;
             case null -> "null";
-            default -> STR."object \{ obj.toString() }";
+            default -> "object " + obj.toString();
         };
 
         return switch (gender) {
-            case MALE -> STR. "Mr. \{ stuffName }" ;
-            case FEMALE -> STR. "Mrs. \{ stuffName }" ;
+            case MALE -> "Mr. " + stuffName;
+            case FEMALE -> "Mrs. " + stuffName;
             case null, default -> stuffName;
         };
     }
 
     public String card() {
-        return STR. """
-                \{ named() } No.\{ stuffId }
-                \{ job.named() }
-                contact:\{ contact }
-                """ ;
+        return named() + " No." + stuffId + "\n" + job.named() + "\ncontact:" + contact + "\n";
     }
 }

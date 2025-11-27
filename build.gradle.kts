@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.gradle.dsl.KotlinJvmExtension
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -15,8 +15,7 @@ plugins {
 group = "me.tony.practice"
 version = "1.0.0"
 
-allprojects {
-
+subprojects {
     repositories {
         mavenCentral()
     }
@@ -25,9 +24,14 @@ allprojects {
         useJUnitPlatform()
     }
 
+    tasks.withType<JavaCompile> {
+        options.release.set(21)
+    }
+
     tasks.withType<KotlinCompile> {
         compilerOptions {
-            freeCompilerArgs.add("-Xjsr305=strict")
+            jvmTarget.set(JvmTarget.JVM_21)
+            freeCompilerArgs.addAll("-Xjsr305=strict", "-Xjdk-release=21")
         }
     }
 }

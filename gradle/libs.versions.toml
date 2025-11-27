@@ -1,17 +1,19 @@
 [versions]
-kotlin = "2.1.0"
+kotlin = "2.2.21"
 kotlinx-coroutines = "1.10.2"
-kotlinx-serialization = "1.8.0"
-springboot = "3.5.0"
-springcloud = "2024.0.0"
-spring-statemachine = "4.0.0"
-jackson = "2.19.0"
-drift = "1.21"
+kotlinx-serialization = "1.9.0"
+springboot = "4.0.0"
+springcloud = "2025.1.0"
+spring-statemachine = "4.0.1"
+jackson = "2.20.1"
+jackson3 = "3.0.2"
+lombok = "1.18.42"
+drift = "1.24"
 slf4j = "2.0.17"
 flink = "1.18.0"
 storm = "2.6.1"
-reactor = "3.7.6"
-reactor-kt = "1.2.3"
+reactor = "3.8.0"
+reactor-kt = "1.3.0"
 
 manifold = "2024.1.1"
 
@@ -35,7 +37,6 @@ springboot-validation = { module = "org.springframework.boot:spring-boot-starter
 springboot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springboot" }
 springboot-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux", version.ref = "springboot" }
 springboot-websocket = { module = "org.springframework.boot:spring-boot-starter-websocket", version.ref = "springboot" }
-springboot-undertow = { module = "org.springframework.boot:spring-boot-starter-undertow", version.ref = "springboot" }
 springboot-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "springboot" }
 springboot-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "springboot" }
 springboot-security = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "springboot" }
@@ -44,11 +45,15 @@ springboot-auth-server = { module = "org.springframework.boot:spring-boot-starte
 
 springboot-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springboot" }
 
+springboot-web-test = { module = "org.springframework.boot:spring-boot-starter-webmvc-test", version.ref = "springboot" }
+springboot-security-test = { module = "org.springframework.boot:spring-boot-starter-security-test", version.ref = "springboot" }
+springboot-jpa-test = { module = "org.springframework.boot:spring-boot-starter-data-jpa-test", version.ref = "springboot" }
+
 springcloud-bom = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "springcloud" }
 
 spring-statemachine-starter = { module = "org.springframework.statemachine:spring-statemachine-starter", version.ref = "spring-statemachine" }
 
-jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+jackson-module-kotlin = { module = "tools.jackson.module:jackson-module-kotlin", version.ref = "jackson3" }
 
 guava = { module = "com.google.guava:guava", version = "33.0.0-jre" }
 
@@ -78,10 +83,10 @@ manifold-strings = { module = "systems.manifold:manifold-strings", version.ref =
 manifold-all = { module = "systems.manifold:manifold-all", version.ref = "manifold" }
 
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
-lombok = { module = "org.projectlombok:lombok", version = "1.18.32" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
 
-postgres-driver = "org.postgresql:postgresql:42.7.3"
-h2 = "com.h2database:h2:2.2.224"
+postgres-driver = "org.postgresql:postgresql:42.7.8"
+h2 = "com.h2database:h2:2.4.240"
 
 [bundles]
 flink = ["flink-clients", "flink-streaming-java", "flink-table-api-java", "flink-table-api-bridge-java"]

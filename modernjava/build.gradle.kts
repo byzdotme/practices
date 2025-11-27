@@ -25,22 +25,11 @@ dependencies {
     annotationProcessor(libs.lombok)
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_25
-    targetCompatibility = JavaVersion.VERSION_25
+tasks.withType<JavaCompile> {
+    options.release.set(25)
 }
 
 tasks.test {
     useJUnitPlatform()
-    jvmArgs("--enable-preview")
-}
-
-// see https://docs.gradle.org/current/userguide/building_java_projects.html#sec:feature_preview
-tasks.withType<JavaCompile> {
-    options.compilerArgs.add("--enable-preview")
-}
-
-tasks.withType<JavaExec> {
-    jvmArgs("--enable-preview")
 }
 

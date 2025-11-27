@@ -30,14 +30,14 @@ public class SdfInConcurrent {
                 var str1 = formatter.format(localDateTimes.get(index));
                 var str2 = simpleDateFormat.format(dates.get(index));
                 if (!Objects.equals(str1, str2)) {
-                    System.out.println(STR."\{str1} != \{str2}");
+                    System.out.println(str1 + " != " + str2);
                     cnt.addAndGet(1);
                 }
             })
         ).toList();
         tasks.forEach(SdfInConcurrent::join);
 
-        System.out.println(STR."bad cases count:\{cnt.get()}");
+        System.out.println("bad cases count:" + cnt.get());
 
     }
 

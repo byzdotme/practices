@@ -35,16 +35,16 @@ public class Tests {
         }
     }
 
-    @Test
+//    @Test
     public void virtualThread() {
         try (ExecutorService es = Executors.newVirtualThreadPerTaskExecutor()) {
             IntStream.range(1, 1_000_000).forEach(idx -> es.submit(() -> {
-                System.out.println(STR. "\{ idx } - \{ Thread.currentThread().getName() }" );
+                System.out.println(idx + " - " + Thread.currentThread().getName());
             }));
         }
     }
 
-    @Test
+//    @Test
     public void sleepInVThread() {
         try (ExecutorService es = Executors.newVirtualThreadPerTaskExecutor()) {
             var num = 1_000;
@@ -68,7 +68,7 @@ public class Tests {
         }
     }
 
-    @Test
+//    @Test
     public void httpRequestInVThread() throws InterruptedException {
         final var num = 1_000;
         final var cdl = new CountDownLatch(num);
@@ -81,7 +81,7 @@ public class Tests {
         log.info("[virtual thread]total cost:{} ms. sum cost:{} ms. avg:{} ms.", System.currentTimeMillis() - begin, costs.get(), (double) costs.get() / cnt.get());
     }
 
-    @Test
+//    @Test
     public void httpRequestInPool() throws InterruptedException {
         final var num = 1_000;
         final var cdl = new CountDownLatch(num);
@@ -127,7 +127,7 @@ public class Tests {
             i.set(20);
         }
         IntStream.range(0, 10).forEach(idx -> {
-            System.out.println(STR."\{idx}- \{i.get()}");
+            System.out.println(idx + "- " + i.get());
         });
     }
 

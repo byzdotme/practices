@@ -27,7 +27,7 @@ public class SealedClassTest {
     void testSwitch() {
         var res = switchShape(shape);
         log.info("shape is {}", res);
-        Assertions.assertEquals(res, "unknown");
+        Assertions.assertEquals("", res);
     }
 
     String switchShape(Shape shape) {

@@ -15,7 +15,7 @@ public class MapIterTest {
         Iterator<Map.Entry<String, Object>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, Object> entry = iterator.next();
-            System.out.println(STR."\{entry.getKey()}: " + entry.getValue());
+            System.out.println(entry.getKey() + ": " + entry.getValue());
             iterator.remove();
         }
         System.out.println(map.size());
