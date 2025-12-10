@@ -17,7 +17,7 @@ public class TryJackson {
     static ObjectMapper om = new ObjectMapper();
     static Gson gson = new GsonBuilder().create();
 
-    public static void main(String[] args) {
+    static void main() {
 
 //        var foo = new Foo();
 //        var bar = new Bar();

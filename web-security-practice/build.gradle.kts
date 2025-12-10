@@ -12,6 +12,7 @@ allOpen {
 }
 
 dependencies {
+    implementation(platform(libs.springboot.bom))
     implementation(libs.kotlin.reflect)
     implementation(libs.jackson.module.kotlin)
     implementation(libs.springboot.web)

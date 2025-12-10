@@ -5,6 +5,7 @@ plugins {
 }
 
 dependencies {
+    implementation(platform(libs.springboot.bom))
     implementation(libs.springboot.base)
     implementation(libs.springboot.actuator)
     implementation(libs.spring.statemachine.starter) {

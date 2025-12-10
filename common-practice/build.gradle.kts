@@ -3,10 +3,15 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.kotlinx.coroutines.core)
-//    implementation(libs.springboot.base)
-    implementation(libs.jackson.module.kotlin)
-    testImplementation(libs.kotlin.test.junit5)
+    implementation(libs.kotlinx.coroutines.core) {
+        version { strictly(libs.versions.kotlinx.coroutines.get()) }
+    }
+    implementation(libs.jackson.module.kotlin) {
+        version { strictly(libs.versions.jackson3.get()) }
+    }
+    testImplementation(libs.kotlin.test.junit5) {
+        version { strictly(libs.versions.kotlin.get()) }
+    }
 }
 
 

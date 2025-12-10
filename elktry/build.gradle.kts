@@ -8,6 +8,7 @@ plugins {
 }
 
 dependencies {
+    implementation(platform(libs.springboot.bom))
     implementation(libs.springboot.web)
     implementation(libs.springboot.es)
     implementation(libs.jackson.module.kotlin)

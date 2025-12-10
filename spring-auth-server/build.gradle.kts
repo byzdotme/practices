@@ -4,6 +4,7 @@ plugins {
 }
 
 dependencies {
+    implementation(platform(libs.springboot.bom))
     implementation(libs.springboot.auth.server)
     testImplementation(libs.kotlin.test.junit5)
     testImplementation(libs.springboot.test)

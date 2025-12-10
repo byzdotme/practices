@@ -1,65 +1,56 @@
 [versions]
 kotlin = "2.2.21"
 kotlinx-coroutines = "1.10.2"
-kotlinx-serialization = "1.9.0"
 springboot = "4.0.0"
 springcloud = "2025.1.0"
 spring-statemachine = "4.0.1"
-jackson = "2.20.1"
 jackson3 = "3.0.2"
 lombok = "1.18.42"
 drift = "1.24"
 slf4j = "2.0.17"
 flink = "1.18.0"
 storm = "2.6.1"
-reactor = "3.8.0"
-reactor-kt = "1.3.0"
-
-manifold = "2024.1.1"
-
-asm = "9.6"
 
 [libraries]
-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
-kotlin-test-base = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
-kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor", version.ref = "kotlinx-coroutines" }
-kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "kotlinx-serialization" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core" }
+kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor" }
+kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json" }
 
-reactor-kotlin-extensions = { module = "io.projectreactor.kotlin:reactor-kotlin-extensions", version.ref = "reactor-kt" }
-reactor-test = { module = "io.projectreactor:reactor-test", version.ref = "reactor" }
+reactor-kotlin-extensions = { module = "io.projectreactor.kotlin:reactor-kotlin-extensions" }
+reactor-test = { module = "io.projectreactor:reactor-test" }
 
 springboot-bom = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springboot" }
-springboot-base = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springboot" }
-springboot-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "springboot" }
-springboot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springboot" }
-springboot-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux", version.ref = "springboot" }
-springboot-websocket = { module = "org.springframework.boot:spring-boot-starter-websocket", version.ref = "springboot" }
-springboot-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "springboot" }
-springboot-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "springboot" }
-springboot-security = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "springboot" }
-springboot-es = { module = "org.springframework.boot:spring-boot-starter-data-elasticsearch", version.ref = "springboot" }
-springboot-auth-server = { module = "org.springframework.boot:spring-boot-starter-oauth2-authorization-server", version.ref = "springboot" }
+springboot-base = { module = "org.springframework.boot:spring-boot-starter" }
+springboot-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+springboot-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+springboot-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
+springboot-websocket = { module = "org.springframework.boot:spring-boot-starter-websocket" }
+springboot-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator" }
+springboot-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+springboot-security = { module = "org.springframework.boot:spring-boot-starter-security" }
+springboot-es = { module = "org.springframework.boot:spring-boot-starter-data-elasticsearch" }
+springboot-auth-server = { module = "org.springframework.boot:spring-boot-starter-oauth2-authorization-server" }
 
-springboot-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springboot" }
+springboot-test = { module = "org.springframework.boot:spring-boot-starter-test" }
 
-springboot-web-test = { module = "org.springframework.boot:spring-boot-starter-webmvc-test", version.ref = "springboot" }
-springboot-security-test = { module = "org.springframework.boot:spring-boot-starter-security-test", version.ref = "springboot" }
-springboot-jpa-test = { module = "org.springframework.boot:spring-boot-starter-data-jpa-test", version.ref = "springboot" }
+springboot-web-test = { module = "org.springframework.boot:spring-boot-starter-webmvc-test" }
+springboot-security-test = { module = "org.springframework.boot:spring-boot-starter-security-test" }
+springboot-jpa-test = { module = "org.springframework.boot:spring-boot-starter-data-jpa-test" }
 
 springcloud-bom = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "springcloud" }
 
 spring-statemachine-starter = { module = "org.springframework.statemachine:spring-statemachine-starter", version.ref = "spring-statemachine" }
 
-jackson-module-kotlin = { module = "tools.jackson.module:jackson-module-kotlin", version.ref = "jackson3" }
+jackson-databind = { module = "tools.jackson.core:jackson-databind" }
+jackson-module-kotlin = { module = "tools.jackson.module:jackson-module-kotlin" }
 
-guava = { module = "com.google.guava:guava", version = "33.0.0-jre" }
+guava = { module = "com.google.guava:guava", version = "33.5.0-jre" }
+gson = { module = "com.google.code.gson:gson", version = "2.13.2" }
 
-thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.19.0" }
-
-ms-thrifty = { module = "com.microsoft.thrifty:thrifty-runtime-jvm", version = "3.1.0" }
+thrift-lib = { module = "org.apache.thrift:libthrift", version = "0.22.0" }
 
 drift-client = { module = "io.airlift.drift:drift-client", version.ref = "drift" }
 drift-server = { module = "io.airlift.drift:drift-server", version.ref = "drift" }
@@ -71,16 +62,6 @@ flink-table-api-java = { module = "org.apache.flink:flink-table-api-java", versi
 flink-table-api-bridge-java = { module = "org.apache.flink:flink-table-api-java-bridge", version.ref = "flink" }
 
 storm-client = { module = 'org.apache.storm:storm-client', version.ref = 'storm' }
-
-manifold-rt-json = { module = "systems.manifold:manifold-json-rt", version.ref = "manifold" }
-manifold-rt-props = { module = "systems.manifold:manifold-props-rt", version.ref = "manifold" }
-manifold-rt-delegation = { module = "systems.manifold:manifold-delegation-rt", version.ref = "manifold" }
-
-manifold-json = { module = "systems.manifold:manifold-json", version.ref = "manifold" }
-manifold-props = { module = "systems.manifold:manifold-props", version.ref = "manifold" }
-manifold-delegation = { module = "systems.manifold:manifold-delegation", version.ref = "manifold" }
-manifold-strings = { module = "systems.manifold:manifold-strings", version.ref = "manifold" }
-manifold-all = { module = "systems.manifold:manifold-all", version.ref = "manifold" }
 
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
@@ -96,9 +77,9 @@ kt-springboot-test = ["kotlin-test-junit5", "springboot-test"]
 kt-springboot-webflux = ["kotlin-reflect", "kotlinx-coroutines-reactor", "springboot-webflux", "reactor-kotlin-extensions", "jackson-module-kotlin"]
 
 [plugins]
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
-kotlin-plugin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
-kotlin-plugin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
-springboot = { id = "org.springframework.boot", version.ref = "springboot" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm" }
+kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring" }
+kotlin-plugin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa" }
+kotlin-plugin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen" }
+springboot = { id = "org.springframework.boot" }
 

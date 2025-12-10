@@ -8,20 +8,15 @@ version = "1.0.0"
 dependencies {
     implementation(libs.slf4j.simple)
     implementation(libs.lombok)
-    implementation(libs.springboot.web)
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("io.undertow:undertow-core:2.3.13.Final")
-    implementation("io.undertow:undertow-servlet:2.3.13.Final")
-    implementation("io.undertow:undertow-websockets-jsr:2.3.13.Final")
-    implementation("com.google.code.findbugs:jsr305:3.0.2")
-//    implementation("org.ow2.asm:asm:${libs.versions.asm}")
-//    implementation("org.ow2.asm:asm-util:${libs.versions.asm}")
-//    implementation("org.ow2.asm:asm-commons:${libs.versions.asm}")
-//    implementation("org.ow2.asm:asm-tree:${libs.versions.asm}")
-//    implementation("org.ow2.asm:asm-analysis:${libs.versions.asm}")
-//    implementation("org.antlr:antlr4:4.13.0")
-    testImplementation(libs.kotlin.test.junit5)
-//    testImplementation("org.ow2.asm:asm-test:${libs.versions.asm}")
+    implementation(libs.gson)
+    implementation(libs.jackson.module.kotlin)
+    implementation(libs.jackson.databind) {
+        version { strictly(libs.versions.jackson3.get()) }
+    }
+    implementation("io.undertow:undertow-servlet:2.3.20.Final")
+    testImplementation(libs.kotlin.test.junit5) {
+        version { strictly(libs.versions.kotlin.get()) }
+    }
     annotationProcessor(libs.lombok)
 }
 

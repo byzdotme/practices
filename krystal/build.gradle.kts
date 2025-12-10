@@ -8,7 +8,7 @@ group = "me.tonyirl.practice.jfx"
 version = "1.0.0"
 
 dependencies {
-    implementation(group ="org.apache.commons", name ="commons-pool2", version ="2.4.2")
+    implementation("org.apache.commons:commons-pool2:2.4.2")
 }
 
 javafx {

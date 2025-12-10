@@ -7,6 +7,7 @@ group = "cn.bootz.teldrassil"
 version = "1.0.0"
 
 dependencies {
+    implementation(platform(libs.springboot.bom))
     implementation(libs.bundles.kt.springboot.webflux)
     testImplementation(libs.bundles.kt.springboot.test)
     testImplementation(libs.reactor.test)
