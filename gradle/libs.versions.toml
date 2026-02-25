@@ -1,13 +1,13 @@
 [versions]
 kotlin = "2.2.21"
 kotlinx-coroutines = "1.10.2"
-springboot = "4.0.0"
-springcloud = "2025.1.0"
+springboot = "4.0.3"
+springcloud = "2025.1.1"
 spring-statemachine = "4.0.1"
-jackson3 = "3.0.2"
+slf4j = "2.0.17"
+jackson3 = "3.0.4"
 lombok = "1.18.42"
 drift = "1.24"
-slf4j = "2.0.17"
 flink = "1.18.0"
 storm = "2.6.1"
 
